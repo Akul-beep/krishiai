@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CropSense Web
 
-## Getting Started
+Pixel-faithful CropSense marketing site, refined with **emil-design-eng**, **impeccable**, and **design-taste-frontend** skills.
 
-First, run the development server:
+**Design read:** AgriTech marketing landing for commercial growers, premium editorial-minimal language, Geist + Tailwind v4 + purposeful motion.
+
+## Run
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Next.js 16 (App Router)
+- Tailwind CSS v4
+- Geist Sans
+- Motion (`motion/react`)
+- Phosphor Icons
+- Simple Icons (partner logos)
 
-## Learn More
+## Skills applied
 
-To learn more about Next.js, take a look at the following resources:
+| Skill | What changed |
+|:------|:-------------|
+| **emil-design-eng** | Custom ease-out curves, `scale(0.97)` press states, hardware-accelerated `transform` animations, staggered reveals, no `transition: all` |
+| **impeccable** | 16px card radius, tinted shadows, WCAG contrast, `text-wrap: balance`, tabular stat numerals, glass with inner highlight |
+| **design-taste-frontend** | Geist over Inter, Phosphor icons, `min-h-[100dvh]`, reduced-motion fallbacks, real SVG partner logos, no scroll cues, responsive container |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Sections
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+All 13 Behance sections: Hero, Logo cloud, Features & stats, Tools carousel, Integration, Arsenal, Drone strip, Eco-smart, Dark stats, Products, Testimonials, CTA, Footer.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+See `/DESIGN.md` for the full design system spec.
