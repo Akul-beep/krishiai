@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { SproutIcon } from "../ui/Icons";
 import { Button } from "../ui/Button";
 import { brand, ctas, sdgNavLinks } from "@/lib/content";
@@ -47,10 +48,17 @@ export function Navbar() {
               href={sdg.href}
               target="_blank"
               rel="noopener noreferrer"
-              title={sdg.title}
-              className="hidden md:inline-flex px-2.5 py-2 rounded-full text-xs font-semibold text-[#1a1a1a]/70 hover:text-[#1a1a1a] hover:bg-black/4 transition-colors whitespace-nowrap shrink-0"
+              title={`${sdg.label}: ${sdg.title}`}
+              aria-label={`${sdg.label}: ${sdg.title}`}
+              className="hidden md:inline-flex items-center justify-center w-9 h-9 rounded-lg overflow-hidden ring-1 ring-black/8 hover:ring-black/20 hover:scale-105 transition-all shrink-0"
             >
-              {sdg.label}
+              <Image
+                src={sdg.image}
+                alt={sdg.title}
+                width={36}
+                height={36}
+                className="h-full w-full object-cover"
+              />
             </a>
           ))}
         </nav>

@@ -104,7 +104,7 @@ export function Problem() {
           ))}
         </Stagger>
 
-        <AnimateIn className="pt-8 border-t border-outline">
+        <AnimateIn className="pt-8 border-t border-outline flex justify-center">
           <CostOfInactionGuess />
         </AnimateIn>
       </div>

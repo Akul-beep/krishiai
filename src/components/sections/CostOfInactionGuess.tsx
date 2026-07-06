@@ -24,7 +24,7 @@ export function CostOfInactionGuess() {
   const isCorrect = picked === ANSWER;
 
   return (
-    <div className="rounded-[var(--radius-card)] border border-outline bg-white p-6 sm:p-8 max-w-2xl">
+    <div className="rounded-[var(--radius-card)] border border-outline bg-white p-6 sm:p-8 max-w-2xl w-full mx-auto">
       <p className="text-xs font-medium uppercase tracking-[0.08em] text-on-surface-muted mb-3">
         Guess the cost of inaction
       </p>
@@ -74,13 +74,15 @@ export function CostOfInactionGuess() {
       )}
 
       {!revealed && (
-        <Button
-          variant="primary"
-          showArrow={false}
-          onClick={() => document.getElementById("solution")?.scrollIntoView({ behavior: "smooth" })}
-        >
-          See The Solution
-        </Button>
+        <div className="flex justify-center">
+          <Button
+            variant="primary"
+            showArrow={false}
+            onClick={() => document.getElementById("solution")?.scrollIntoView({ behavior: "smooth" })}
+          >
+            See The Solution
+          </Button>
+        </div>
       )}
     </div>
   );

@@ -155,9 +155,9 @@ export const team = [
 ];
 
 export const sdgNavLinks = [
-  { label: "SDG 2", href: "https://sdgs.un.org/goals/goal2", title: "Zero Hunger" },
-  { label: "SDG 6", href: "https://sdgs.un.org/goals/goal6", title: "Clean Water" },
-  { label: "SDG 13", href: "https://sdgs.un.org/goals/goal13", title: "Climate Action" },
+  { label: "SDG 2", href: "https://sdgs.un.org/goals/goal2", title: "Zero Hunger", image: "/sdgs/sdg-2.png" },
+  { label: "SDG 6", href: "https://sdgs.un.org/goals/goal6", title: "Clean Water", image: "/sdgs/sdg-6.png" },
+  { label: "SDG 13", href: "https://sdgs.un.org/goals/goal13", title: "Climate Action", image: "/sdgs/sdg-13.png" },
 ];
 
 export const annualReports = [
