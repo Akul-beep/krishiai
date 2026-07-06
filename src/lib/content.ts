@@ -33,9 +33,9 @@ export const missionStatement =
   "We give every farmer access to the same field intelligence that large agribusiness already has — clear guidance on water, fertilizer, and crop health from one solar-powered field unit.";
 
 export const impactStats = [
-  { value: "30%", label: "Less Water Used", desc: "Through precision irrigation" },
-  { value: "20%", label: "Higher Crop Yield", desc: "For small and marginal farmers" },
-  { value: "20%", label: "Less Fertilizer", desc: "Targeted application, less waste" },
+  { value: "30%", label: "Less Water Used", desc: "Through precision irrigation", direction: "down" as const },
+  { value: "20%", label: "Less Fertilizer", desc: "Targeted application, less waste", direction: "down" as const },
+  { value: "20%", label: "Higher Crop Yield", desc: "For small and marginal farmers", direction: "up" as const },
 ];
 
 export const problemStats = [
@@ -142,16 +142,22 @@ export const sdgs = [
 export const team = [
   {
     name: "Akul Nehra",
-    role: "Founder & CEO",
+    role: "Chief Design Engineer",
     bio: "Building AI and IoT tools that put enterprise-grade field intelligence in the hands of farmers who have never had it. Founder of KrishiAI, Frontier Challenge, and Arise Financial Literacy.",
     image: "akul",
   },
   {
     name: "Karambir Inder Singh",
-    role: "Chief Operating Officer",
+    role: "Chief of Agricultural Expansion",
     bio: "Leads pilot operations and farmer engagement across Punjab. Turns field data into programs that scale to millions of growers.",
     image: "karambir",
   },
+];
+
+export const sdgNavLinks = [
+  { label: "SDG 2", href: "https://sdgs.un.org/goals/goal2", title: "Zero Hunger" },
+  { label: "SDG 6", href: "https://sdgs.un.org/goals/goal6", title: "Clean Water" },
+  { label: "SDG 13", href: "https://sdgs.un.org/goals/goal13", title: "Climate Action" },
 ];
 
 export const annualReports = [

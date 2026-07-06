@@ -5,7 +5,6 @@ import { Solution } from "@/components/sections/Solution";
 import { EvidenceScroll } from "@/components/sections/EvidenceScroll";
 import { FieldTimeline } from "@/components/sections/FieldTimeline";
 import { Problem } from "@/components/sections/Problem";
-import { SDGs } from "@/components/sections/SDGs";
 import { Team } from "@/components/sections/Team";
 import { AnnualReport } from "@/components/sections/AnnualReport";
 import { Footer } from "@/components/sections/Footer";
@@ -23,7 +22,6 @@ export default function Home() {
       <FieldTimeline />
       {/* Background — problem, alignment, team, partnerships */}
       <Problem />
-      <SDGs />
       <Team />
       <AnnualReport />
       <Footer />

@@ -49,7 +49,7 @@ const RESUME_AFTER_MS = 14000;
 export function Solution() {
   const [activeAccordion, setActiveAccordion] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
-  const [componentId, setComponentId] = useState<string | null>(null);
+  const [componentId, setComponentId] = useState<string | null>("npk");
   const pinPointRef = useRef<{ x: number; y: number } | null>(null);
   const descriptionRef = useRef<HTMLDivElement>(null);
 

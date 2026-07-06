@@ -3,6 +3,7 @@ import { images } from "@/lib/images";
 import { impactStats, missionStatement } from "@/lib/content";
 import { impactStories } from "@/lib/content-extra";
 import { SectionTag, SerifEm } from "../ui/Typography";
+import { ImpactStatValue } from "../ui/ImpactStatValue";
 import { AnimateIn, Stagger, StaggerItem } from "../ui/AnimateIn";
 
 const storyImages = {
@@ -16,9 +17,9 @@ export function ImpactStats() {
     <section id="impact" className="pt-8 pb-12 sm:pb-14 bg-white">
       <div className="container-page">
         <AnimateIn className="pb-6 border-b border-outline mb-0">
-          <SectionTag>Our Mission &amp; Impact</SectionTag>
+          <SectionTag>What It Delivers</SectionTag>
           <h2 className="headline-lg text-[#1a1a1a] max-w-2xl mt-1">
-            What Our Solution <SerifEm>Delivers</SerifEm>
+            Outcomes For <SerifEm>Farmers &amp; Fields</SerifEm>
           </h2>
           <p className="text-sm text-on-surface-variant mt-3 max-w-2xl leading-relaxed">
             {missionStatement}
@@ -33,7 +34,7 @@ export function ImpactStats() {
                 className="text-center sm:text-left sm:px-6 sm:first:pl-0 sm:last:pr-0 sm:border-r sm:last:border-r-0 border-outline"
               >
                 <p className="stat-value text-[clamp(2.5rem,4vw,3.5rem)] font-semibold text-[#1a1a1a] leading-none mb-2">
-                  {stat.value}
+                  <ImpactStatValue stat={stat} iconClassName="w-6 h-6 sm:w-7 sm:h-7" />
                 </p>
                 <p className="text-sm font-medium text-[#1a1a1a] mb-1">{stat.label}</p>
                 <p className="text-xs text-on-surface-muted">{stat.desc}</p>

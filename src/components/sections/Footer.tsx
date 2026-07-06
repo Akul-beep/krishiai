@@ -1,7 +1,7 @@
 "use client";
 
 import { LinkedinLogo, TelegramLogo, Envelope } from "@phosphor-icons/react";
-import { brand, ctas } from "@/lib/content";
+import { brand, ctas, sdgNavLinks } from "@/lib/content";
 import { SproutIcon } from "../ui/Icons";
 import { Button } from "../ui/Button";
 
@@ -9,8 +9,7 @@ const footerLinks = [
   { label: "Impact", href: "#impact" },
   { label: "Solution", href: "#solution" },
   { label: "Evidence", href: "#evidence" },
-  { label: "Events", href: "#events" },
-  { label: "SDGs", href: "#sdgs" },
+  { label: "Journey", href: "#journey" },
   { label: "Team", href: "#team" },
   { label: "Reports", href: "#reports" },
 ];
@@ -46,10 +45,25 @@ export function Footer() {
           </div>
         </div>
 
-        <nav className="flex flex-wrap gap-x-6 gap-y-3 mb-12 text-sm text-white/60" aria-label="Footer">
+        <nav className="flex flex-wrap gap-x-6 gap-y-3 mb-6 text-sm text-white/60" aria-label="Footer">
           {footerLinks.map((link) => (
             <a key={link.href} href={link.href} className="hover:text-white transition-colors">
               {link.label}
+            </a>
+          ))}
+        </nav>
+
+        <nav className="flex flex-wrap gap-x-5 gap-y-2 mb-12 text-xs text-white/45" aria-label="UN SDGs">
+          {sdgNavLinks.map((sdg) => (
+            <a
+              key={sdg.label}
+              href={sdg.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              title={sdg.title}
+              className="hover:text-white transition-colors"
+            >
+              {sdg.label}
             </a>
           ))}
         </nav>

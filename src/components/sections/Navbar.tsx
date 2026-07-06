@@ -2,13 +2,13 @@
 
 import { SproutIcon } from "../ui/Icons";
 import { Button } from "../ui/Button";
-import { brand, ctas } from "@/lib/content";
+import { brand, ctas, sdgNavLinks } from "@/lib/content";
 
 const navLinks = [
   { label: "Impact", href: "#impact" },
   { label: "Problem", href: "#problem" },
   { label: "Solution", href: "#solution" },
-  { label: "Events", href: "#events" },
+  { label: "Journey", href: "#journey" },
   { label: "Team", href: "#team" },
 ];
 
@@ -25,19 +25,32 @@ export function Navbar() {
         </a>
 
         <nav
-          className="pill-nav flex items-center gap-1 rounded-full px-2 py-1.5 mx-auto"
+          className="pill-nav flex items-center gap-0.5 rounded-full px-1.5 py-1.5 mx-auto overflow-x-auto max-w-[min(100%,calc(100vw-8rem))] scrollbar-none"
           aria-label="Primary"
         >
-          <a href="#home" className="sm:hidden flex items-center justify-center w-9 h-9 rounded-full hover:bg-black/5">
+          <a href="#home" className="sm:hidden flex items-center justify-center w-9 h-9 rounded-full hover:bg-black/5 shrink-0">
             <SproutIcon className="w-4 h-4" />
           </a>
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="px-4 py-2 rounded-full text-sm font-medium text-[#1a1a1a]/80 hover:text-[#1a1a1a] hover:bg-black/4 transition-colors whitespace-nowrap"
+              className="px-3 py-2 rounded-full text-sm font-medium text-[#1a1a1a]/80 hover:text-[#1a1a1a] hover:bg-black/4 transition-colors whitespace-nowrap shrink-0"
             >
               {link.label}
+            </a>
+          ))}
+          <span className="hidden md:block w-px h-5 bg-black/10 mx-1 shrink-0" aria-hidden />
+          {sdgNavLinks.map((sdg) => (
+            <a
+              key={sdg.label}
+              href={sdg.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              title={sdg.title}
+              className="hidden md:inline-flex px-2.5 py-2 rounded-full text-xs font-semibold text-[#1a1a1a]/70 hover:text-[#1a1a1a] hover:bg-black/4 transition-colors whitespace-nowrap shrink-0"
+            >
+              {sdg.label}
             </a>
           ))}
         </nav>

@@ -8,10 +8,10 @@ import { AnimateIn, Stagger, StaggerItem } from "../ui/AnimateIn";
 
 export function FieldTimeline() {
   return (
-    <section id="events" className="py-[var(--section-y)] bg-white border-t border-outline">
+    <section id="journey" className="py-[var(--section-y)] bg-white border-t border-outline">
       <div className="container-page">
         <AnimateIn className="mb-12 max-w-lg">
-          <SectionTag>Field Events</SectionTag>
+          <SectionTag>Our Journey</SectionTag>
           <h2 className="headline-lg text-[#1a1a1a]">
             From Research To <SerifEm>National Scale</SerifEm>
           </h2>

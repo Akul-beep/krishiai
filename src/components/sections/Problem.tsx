@@ -4,7 +4,7 @@ import Image from "next/image";
 import { images } from "@/lib/images";
 import { problemStats } from "@/lib/content";
 import { SectionTag, SerifEm } from "../ui/Typography";
-import { Button } from "../ui/Button";
+import { CostOfInactionGuess } from "./CostOfInactionGuess";
 import { AnimateIn, Stagger, StaggerItem } from "../ui/AnimateIn";
 
 const problemTiles = [
@@ -66,11 +66,11 @@ function ProblemTile({
 
       <div className="relative z-10 flex h-full flex-col justify-end p-6 sm:p-7">
         {stat ? (
-          <p className="stat-value text-[clamp(2.25rem,4.5vw,3.5rem)] font-bold text-primary leading-none mb-2">
+          <p className="stat-value text-[clamp(2.25rem,4.5vw,3.5rem)] font-bold text-amber-400 leading-none mb-2">
             {stat}
           </p>
         ) : label ? (
-          <span className="inline-flex w-fit items-center rounded-full bg-primary/20 border border-primary/30 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.1em] text-primary mb-3">
+          <span className="inline-flex w-fit items-center rounded-full bg-amber-400/20 border border-amber-400/35 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.1em] text-amber-300 mb-3">
             {label}
           </span>
         ) : null}
@@ -105,27 +105,7 @@ export function Problem() {
         </Stagger>
 
         <AnimateIn className="pt-8 border-t border-outline">
-          <p className="text-xs text-on-surface-muted mb-5 flex items-center gap-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-primary" aria-hidden />
-            The cost of inaction
-          </p>
-
-          <p className="text-[clamp(1.25rem,2.6vw,2rem)] leading-[1.35] tracking-[-0.02em] max-w-4xl mb-6">
-            <span className="font-semibold text-[#1a1a1a]">
-              $6 billion lost every year. 150 million farmers at risk.
-            </span>{" "}
-            <span className="text-[#1a1a1a]/40">
-              Agriculture uses 70% of India&apos;s freshwater. Up to 60% is wasted every season.
-            </span>
-          </p>
-
-          <Button
-            variant="primary"
-            showArrow={false}
-            onClick={() => document.getElementById("solution")?.scrollIntoView({ behavior: "smooth" })}
-          >
-            See The Solution
-          </Button>
+          <CostOfInactionGuess />
         </AnimateIn>
       </div>
     </section>

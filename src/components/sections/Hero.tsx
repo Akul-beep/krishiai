@@ -6,6 +6,7 @@ import { impactStats, ctas } from "@/lib/content";
 import { Navbar } from "./Navbar";
 import { Button } from "../ui/Button";
 import { SerifEm } from "../ui/Typography";
+import { ImpactStatValue } from "../ui/ImpactStatValue";
 import { AnimateIn } from "../ui/AnimateIn";
 import { ProductHeroPreviewLoader } from "../product/ProductHeroPreviewLoader";
 
@@ -67,7 +68,7 @@ export function Hero() {
                 {impactStats.map((stat) => (
                   <div key={stat.label} className="text-center lg:text-left">
                     <p className="stat-value text-[clamp(1.75rem,4vw,2.75rem)] font-semibold text-primary leading-none mb-1.5">
-                      {stat.value}
+                      <ImpactStatValue stat={stat} />
                     </p>
                     <p className="text-[11px] sm:text-xs font-medium text-white/90 leading-tight">{stat.label}</p>
                   </div>
