@@ -26,7 +26,7 @@ export function Navbar() {
         </a>
 
         <nav
-          className="pill-nav flex items-center gap-0.5 rounded-full px-1.5 py-1.5 mx-auto overflow-x-auto max-w-[min(100%,calc(100vw-8rem))] scrollbar-none"
+          className="pill-nav flex items-center gap-0.5 rounded-full px-2 py-2 mx-auto overflow-x-auto max-w-[min(100%,calc(100vw-8rem))] scrollbar-none"
           aria-label="Primary"
         >
           <a href="#home" className="sm:hidden flex items-center justify-center w-9 h-9 rounded-full hover:bg-black/5 shrink-0">
@@ -41,26 +41,28 @@ export function Navbar() {
               {link.label}
             </a>
           ))}
-          <span className="hidden md:block w-px h-5 bg-black/10 mx-1 shrink-0" aria-hidden />
-          {sdgNavLinks.map((sdg) => (
-            <a
-              key={sdg.label}
-              href={sdg.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              title={`${sdg.label}: ${sdg.title}`}
-              aria-label={`${sdg.label}: ${sdg.title}`}
-              className="hidden md:inline-flex items-center justify-center w-9 h-9 rounded-lg overflow-hidden ring-1 ring-black/8 hover:ring-black/20 hover:scale-105 transition-all shrink-0"
-            >
-              <Image
-                src={sdg.image}
-                alt={sdg.title}
-                width={36}
-                height={36}
-                className="h-full w-full object-cover"
-              />
-            </a>
-          ))}
+          <span className="hidden md:block w-px h-8 bg-black/10 mx-1.5 shrink-0" aria-hidden />
+          <div className="hidden md:flex items-center gap-1.5 shrink-0">
+            {sdgNavLinks.map((sdg) => (
+              <a
+                key={sdg.label}
+                href={sdg.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                title={`${sdg.label}: ${sdg.title}`}
+                aria-label={`${sdg.label}: ${sdg.title}`}
+                className="inline-flex items-center justify-center w-12 h-12 rounded-lg overflow-hidden ring-1 ring-black/8 hover:ring-black/20 hover:scale-105 transition-all shrink-0"
+              >
+                <Image
+                  src={sdg.image}
+                  alt={sdg.title}
+                  width={48}
+                  height={48}
+                  className="h-full w-full object-cover"
+                />
+              </a>
+            ))}
+          </div>
         </nav>
 
         <Button href={ctas.partner.href} variant="dark" size="sm" showArrow={false} className="shrink-0 hidden sm:inline-flex">
