@@ -2,11 +2,10 @@
 
 import Image from "next/image";
 import { images } from "@/lib/images";
-import { impactStats, ctas } from "@/lib/content";
+import { ctas } from "@/lib/content";
 import { Navbar } from "./Navbar";
 import { Button } from "../ui/Button";
 import { SerifEm } from "../ui/Typography";
-import { ImpactStatValue } from "../ui/ImpactStatValue";
 import { AnimateIn } from "../ui/AnimateIn";
 import { ProductHeroPreviewLoader } from "../product/ProductHeroPreviewLoader";
 
@@ -60,19 +59,6 @@ export function Hero() {
                 >
                   {ctas.viewSolution.label}
                 </Button>
-              </div>
-            </AnimateIn>
-
-            <AnimateIn delay={0.22}>
-              <div className="grid grid-cols-3 gap-3 sm:gap-6 rounded-[var(--radius-card)] border border-white/15 bg-black/30 backdrop-blur-md px-4 py-5 sm:px-8 sm:py-6 max-w-3xl mx-auto lg:mx-0">
-                {impactStats.map((stat) => (
-                  <div key={stat.label} className="text-center lg:text-left">
-                    <p className="stat-value text-[clamp(1.75rem,4vw,2.75rem)] font-semibold text-primary leading-none mb-1.5">
-                      <ImpactStatValue stat={stat} />
-                    </p>
-                    <p className="text-[11px] sm:text-xs font-medium text-white/90 leading-tight">{stat.label}</p>
-                  </div>
-                ))}
               </div>
             </AnimateIn>
           </div>
