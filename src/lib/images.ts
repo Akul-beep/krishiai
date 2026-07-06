@@ -20,7 +20,7 @@ export const images = {
   cta: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=2400&q=85",
   footer: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=2400&q=85",
   akul: "/team/akul-nehra.png",
-  karambir: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=85",
+  karambir: "/team/karambir-inder-singh.png",
   impactStoryIrrigation: "/impact/precision-irrigation.png",
   impactStoryHarvest: "/impact/stronger-harvests.png",
   impactStorySoil: "/impact/healthier-soil.png",
